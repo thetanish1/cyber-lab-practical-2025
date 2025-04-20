@@ -38,3 +38,6 @@ if __name__ == "__main__":
 
     decrypted = decrypt_data(key, encrypted)
     print(f"Decrypted Data: {decrypted}")
+
+def run_practical_10():
+    print("Running Practical 10")

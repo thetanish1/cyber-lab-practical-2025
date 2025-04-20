@@ -29,3 +29,7 @@ def euler_totient(n):
 n = int(input("Enter a number to find its Euler's Totient Function: "))
 phi_n = euler_totient(n)
 print(f"Euler's Totient Function value for {n} is: {phi_n}")
+
+def run_practical_6():
+    # Add code for Practical 1
+    print("Running Practical 1")

@@ -40,3 +40,7 @@ a = list(map(int, input("Enter remainders (space-separated): ").split()))
 # Calculate the result using Chinese Remainder Theorem
 result = chinese_remainder_theorem(n, a)
 print(f"The solution to the system of congruences is: {result}")
+
+def run_practical_4():
+    # Add code for Practical 1
+    print("Running Practical 1")

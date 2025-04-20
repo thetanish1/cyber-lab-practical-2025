@@ -37,3 +37,5 @@ private_b = 15  # User B's private key
 # Execute Diffie-Hellman Key Exchange
 shared_secret = diffie_hellman(p, g, private_a, private_b)
 
+def run_practical_8():
+    print("Running Practical 8")

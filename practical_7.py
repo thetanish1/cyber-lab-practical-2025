@@ -37,3 +37,8 @@ print(f"Encrypted Message (in bytes): {cipher_text}")
 # Decrypt the cipher text
 decrypted_message = decrypt(cipher_text, key)
 print(f"Decrypted Message: {decrypted_message}")
+
+
+def run_practical_7():
+    # Add code for Practical 1
+    print("Running Practical 1")

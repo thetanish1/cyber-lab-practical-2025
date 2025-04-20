@@ -76,3 +76,6 @@ def rsa_demo():
 
 # Run RSA Demo
 rsa_demo()
+def run_practical_5():
+    # Add code for Practical 1
+    print("Running Practical 1")
