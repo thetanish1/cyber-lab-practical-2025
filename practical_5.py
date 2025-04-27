@@ -1,14 +1,11 @@
-#Python Code for RSA
 import random
 from sympy import isprime
 
-# Function to calculate the gcd (Greatest Common Divisor)
 def gcd(a, b):
     while b:
         a, b = b, a % b
     return a
 
-# Function to calculate the modular inverse
 def mod_inverse(e, phi):
     # Using extended Euclidean algorithm
     d = 0
@@ -22,7 +19,6 @@ def mod_inverse(e, phi):
         x1 += phi
     return x1
 
-# Function to generate RSA keys
 def generate_keys():
     p = q = 1
     while not isprime(p):
@@ -33,12 +29,10 @@ def generate_keys():
     n = p * q
     phi_n = (p - 1) * (q - 1)
 
-    # Choose e such that gcd(e, phi_n) = 1
     e = 65537  # A common choice for e
     while gcd(e, phi_n) != 1:
         e = random.randint(2, phi_n)
 
-    # Calculate the modular inverse of e modulo phi_n
     d = mod_inverse(e, phi_n)
 
     public_key = (e, n)
@@ -46,19 +40,16 @@ def generate_keys():
 
     return public_key, private_key
 
-# Function to encrypt a message using the public key
 def encrypt(public_key, plaintext):
     e, n = public_key
     ciphertext = [pow(ord(char), e, n) for char in plaintext]  # Encryption
     return ciphertext
 
-# Function to decrypt a message using the private key
 def decrypt(private_key, ciphertext):
     d, n = private_key
     decrypted_text = ''.join([chr(pow(char, d, n)) for char in ciphertext])  # Decryption
     return decrypted_text
 
-# Main Function
 def rsa_demo():
     print("Generating RSA keys...")
     public_key, private_key = generate_keys()
@@ -69,7 +60,7 @@ def rsa_demo():
     print("Original Message:", message)
 
     encrypted_msg = encrypt(public_key, message)
-    print("Encrypted Message:", encrypted_msg)
+    print("Practical no 5: \nEncrypted Message:", encrypted_msg)
 
     decrypted_msg = decrypt(private_key, encrypted_msg)
     print("Decrypted Message:", decrypted_msg)
@@ -77,5 +68,4 @@ def rsa_demo():
 # Run RSA Demo
 rsa_demo()
 def run_practical_5():
-    # Add code for Practical 1
-    print("Running Practical 1")
+    print("Running Practical 5")
